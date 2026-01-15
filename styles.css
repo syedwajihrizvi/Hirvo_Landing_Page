@@ -94,6 +94,7 @@ nav a:hover { color: var(--emerald-600); }
   gap: 40px;
   text-align: center;
   color: white;
+  overflow: hidden;
 }
 
 .hero h2 {
@@ -146,6 +147,7 @@ nav a:hover { color: var(--emerald-600); }
   width: 400px;
   height: 600px;
   margin: auto;
+  overflow-y: visible;
 }
 
 #phone-stack-user {
@@ -241,6 +243,16 @@ section {
   font-size: 18px;
 }
 
+.hero-toggle,
+.feature-toggle,
+.how-toggle {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .feature-icon {
   width: 48px;
   height: 48px;
@@ -260,6 +272,7 @@ section {
 
 .features-wrapper {
   position: relative;
+  overflow-y: hidden ;
 }
 
 .features-wrapper::before,
@@ -488,6 +501,7 @@ section {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
+  width: 100%;;
 }
 
 .cta-inner {
@@ -545,11 +559,33 @@ footer {
     text-align: left;
     justify-content: space-between;
     gap: 10rem;
+    overflow: visible;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .logo-desktop {
+    display: flex;
   }
 
   .hero-actions {
     justify-content: flex-start;
   }
+
+  .cta-btn {
+    width: auto;
+  }
+.hero-toggle,
+.feature-toggle,
+.how-toggle {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: start;
+  justify-content: start;
+}
 
 .phone {
   position: absolute;
@@ -598,6 +634,20 @@ footer {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .phone.right {
+    left: -90%;
+    top: 30%;
+    transform: translateX(120px) rotate(-20deg);
+  }
+
+  .phone.left {
+    left: 0%;
+    top: -20%;
+    transform: translateX(-120px) rotate(-10deg);
+  }
+}
+
 /* ================= MOBILE FOOTER ================= */
 
 @media (max-width: 767px) {
@@ -610,10 +660,26 @@ footer {
   .footer-links a {
     margin: 0 8px;
   }
+
+  .logo-mobile {
+    display: flex;
+  }
+
+  .logo-desktop {
+    display: none;
+  }
 }
 
 /* Overlay */
 /* ================= SIGN UP OVERLAY ================= */
+
+.logo-mobile {
+  height: 40px;
+}
+
+.logo-desktop {
+  height: 45px;
+}
 
 .sign-up-overlay {
   position: fixed;

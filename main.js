@@ -110,6 +110,7 @@ function removeToast(toast) {
     });
 }
 
+
 // Send form data to backend
 const businessForm = document.getElementById('signupForm');
 const companyNameInput = businessForm.querySelector('input[name="company-name"]');
