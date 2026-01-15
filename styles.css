@@ -97,6 +97,10 @@ nav a:hover { color: var(--emerald-600); }
   overflow: hidden;
 }
 
+.cta {
+  overflow: hidden;
+}
+
 .hero h2 {
   font-size: clamp(52px, 6vw, 72px);
   font-weight: 900;
@@ -152,9 +156,23 @@ nav a:hover { color: var(--emerald-600); }
 .phone-stack {
   position: relative;
   width: 400px;
-  height: 600px;
+  height: 350px;
   margin: auto;
   overflow-y: visible;
+}
+
+.phone.left-2x {
+  left: 10%;
+  top: 60px;
+  transform: translateX(-30px) rotate(-12deg);
+  z-index: 1;
+}
+
+.phone.right-2x {
+  left: 40%;
+  top: 60px;
+  transform: translateX(40px) rotate(12deg);
+  z-index: 1;
 }
 
 #phone-stack-user {
@@ -171,8 +189,32 @@ nav a:hover { color: var(--emerald-600); }
   background: #0f172a;
   border-radius: 42px;
   padding: 8px;
-  box-shadow: 0 50px 100px -10px rgba(0,0,0,0.55);
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.55);
   transition: transform 0.3s ease;
+}
+
+@media screen and (min-width: 767px) {
+  .phone-stack {
+    height: 500px;
+  }
+
+  .phone {
+    box-shadow: 0 20px 100px -10px rgba(0,0,0,0.55);
+  }
+
+  .phone.left-2x {
+  left: 10%;
+  top: 60px;
+  transform: translateX(-30px) rotate(-12deg);
+  z-index: 1;
+}
+
+.phone.right-2x {
+  left: 40%;
+  top: 60px;
+  transform: translateX(40px) rotate(12deg);
+  z-index: 1;
+}
 }
 
 .phone-small {
@@ -540,6 +582,9 @@ section {
   background: linear-gradient(180deg, #ecfdf5, #d1fae5);
   padding: 96px 24px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cta-btn {
@@ -568,6 +613,17 @@ section {
   color: var(--slate-700);
 }
 
+@media screen and (min-width: 830px) {
+.cta {
+  background: linear-gradient(180deg, #ecfdf5, #d1fae5);
+  padding: 96px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+  
+}
 /* ================= FOOTER ================= */
 
 footer {
