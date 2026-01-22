@@ -76,9 +76,11 @@ ctas.forEach(cta => (
 ))
 
 const closeModalBtn = document.getElementById('closeModalBtn');
+if (closeModalBtn) {
 closeModalBtn.addEventListener('click', () => {
     document.getElementById('businessSignup').style.display = 'none'
 })
+}
 
 /* ================= Show Toast ================= */
 
@@ -113,6 +115,7 @@ function removeToast(toast) {
 
 // Send form data to backend
 const businessForm = document.getElementById('signupForm');
+if (businessForm) {
 const companyNameInput = businessForm.querySelector('input[name="company-name"]');
 const emailInput = businessForm.querySelector('input[name="email"]');
 
@@ -145,12 +148,15 @@ businessForm.addEventListener('submit', async (event) => {
     businessForm.reset();
     document.getElementById('businessSignup').style.display = 'none';
 })
+}
+
 
 /* ================= FEATURE SCROLL ================= */
 const featureContainer = document.querySelector('.features');
 const leftBtn = document.querySelector('.feature-btns .bi-arrow-left');
 const rightBtn = document.querySelector('.feature-btns .bi-arrow-right');
 
+if (leftBtn && rightBtn && featureContainer) {
 leftBtn.addEventListener('click', () => {
   featureContainer.scrollBy({
     left: -300,
@@ -165,3 +171,79 @@ rightBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+}
+
+/* ================= PASSWORD RESET QUERY PARAMS ================= */
+
+const validatePassword = (password) => {
+  if (password == null || password.length < 8) {
+    return false;
+  }
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars;
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const token = urlParams.get('token');
+const userType = urlParams.get('type');
+console.log('Password reset token:', token);
+
+const resetPasswordBtn = document.getElementById('resetPasswordBtn');
+const newPasswordInput = document.getElementById('newPassword');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+
+if (resetPasswordBtn) {
+  resetPasswordBtn.addEventListener('click', async () => {
+    if (!token) {
+      showToast('Unauthorized Password Reset Request.', 'error');
+      return;
+    }
+    if (!userType || (userType !== 'business' && userType !== 'user')) {
+      showToast('Invalid request type for password reset.', 'error');
+      return;
+    }
+    const newPassword = newPasswordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    if (newPassword !== confirmPassword) {
+      showToast('Passwords do not match.', 'error');
+      return;
+    }
+
+    if (!validatePassword(newPassword)) {
+      showToast('Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.', 'error');
+      return;
+    }
+
+    let baseUrl = "backend-url/api/"
+    if (userType === 'business') {
+      baseUrl += "business-accounts/reset-password";
+    } else {
+      baseUrl += "accounts/reset-password";
+    }
+            showToast('Password reset successfully!', 'success');
+        newPasswordInput.value = '';
+        confirmPasswordInput.value = '';
+    try {
+      const res = await fetch("backend-url/api/auth/reset-password", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token, newPassword }),
+      })
+      if (res.ok) {
+        showToast('Password reset successfully!', 'success');
+        newPasswordInput.value = '';
+        confirmPasswordInput.value = '';
+      } else {
+        showToast('Failed to reset password. Please try again.', 'error');
+      }
+    } catch (error) {
+      showToast('An error occurred. Please try again later.', 'error');
+    }
+  })
+}

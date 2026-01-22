@@ -997,3 +997,66 @@ footer {
     transform: translateX(120%);
   }
 }
+
+/* ================= MAIN SECTION ================= */
+.main {
+  background:
+    radial-gradient(1000px 500px at 80% -20%, rgba(255,255,255,0.25), transparent 40%),
+    linear-gradient(135deg, var(--emerald-700), var(--emerald-400));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.password-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  max-width: 350px;
+  border-radius: 1rem;
+  padding: 2rem;
+  flex-direction: column;
+  background-color: #d1fae5;
+}
+
+.password-input-container h1 {
+  color: var(--emerald-700);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.5rem;
+  margin: 0 0 16px 0;
+  color: #10b981;
+  align-self: flex-start;
+}
+
+.password-input-container .input-field {
+  width: 300px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  outline: none;
+}
+
+.password-input-container .primary-btn {
+  width: 320px;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #10b981;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: 16px;
+  transition: all .2s ease;
+}
+
+.password-input-container .primary-btn:hover {
+  background-color: #059669;
+  cursor: pointer
+}
