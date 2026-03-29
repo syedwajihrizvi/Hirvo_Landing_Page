@@ -141,14 +141,14 @@ businessForm.addEventListener('submit', async (event) => {
         },
         body: JSON.stringify({ email, company }),
     })
-    console.log(res)
     if (!res.ok) {
         showToast('Something went wrong. Please try again later.', 'error');
         return;
     }
-    showToast('Joined Successfully!', 'success');
-    businessForm.reset();
+    companyNameInput.value = '';
+    emailInput.value = '';
     document.getElementById('businessSignup').style.display = 'none';
+    showToast('Joined Successfully!', 'success');
 })
 }
 
@@ -225,7 +225,7 @@ if (resetPasswordBtn) {
     } else {
       baseUrl += "accounts/reset-password";
     }
-            showToast('Password reset successfully!', 'success');
+        showToast('Password reset successfully!', 'success');
         newPasswordInput.value = '';
         confirmPasswordInput.value = '';
     try {
