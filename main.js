@@ -225,9 +225,6 @@ if (resetPasswordBtn) {
     } else {
       baseUrl += "accounts/reset-password";
     }
-        showToast('Password reset successfully!', 'success');
-        newPasswordInput.value = '';
-        confirmPasswordInput.value = '';
     try {
       const res = await fetch(baseUrl, {
         method: "PUT",
@@ -241,6 +238,7 @@ if (resetPasswordBtn) {
         newPasswordInput.value = '';
         confirmPasswordInput.value = '';
       } else {
+        console.log('Failed to reset password:', res)
         showToast('Failed to reset password. Please try again.', 'error');
       }
     } catch (error) {
