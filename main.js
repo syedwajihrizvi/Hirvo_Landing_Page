@@ -133,7 +133,7 @@ businessForm.addEventListener('submit', async (event) => {
         showToast('Please add an email address.', 'error');
         return;
     }
-    const res = await fetch("https://dauntless-aron-unprobationary.ngrok-free.dev/api/business-accounts/join-waitlist", {
+    const res = await fetch("https://hirvo-backend-production.up.railway.app/api/business-accounts/join-waitlist", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -219,7 +219,7 @@ if (resetPasswordBtn) {
       return;
     }
 
-    let baseUrl = "https://dauntless-aron-unprobationary.ngrok-free.dev/api/"
+    let baseUrl = "https://hirvo-backend-production.up.railway.app/api/"
     if (userType === 'business') {
       baseUrl += "business-accounts/reset-password";
     } else {
@@ -231,17 +231,17 @@ if (resetPasswordBtn) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ token, password }),
+        body: JSON.stringify({ token, password: newPassword }),
       })
       if (res.ok) {
         showToast('Password reset successfully!', 'success');
         newPasswordInput.value = '';
         confirmPasswordInput.value = '';
       } else {
-        console.log('Failed to reset password:', res)
         showToast('Failed to reset password. Please try again.', 'error');
       }
     } catch (error) {
+      console.log('Error resetting password:', error)
       showToast('An error occurred. Please try again later.', 'error');
     }
   })
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (code && email) {
         loadingCard.style.display = 'flex';
         try {
-            const res = await fetch('https://dauntless-aron-unprobationary.ngrok-free.dev/api/accounts/verify-account', {
+            const res = await fetch('https://hirvo-backend-production.up.railway.app/api/accounts/verify-account', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
