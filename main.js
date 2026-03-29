@@ -134,7 +134,7 @@ businessForm.addEventListener('submit', async (event) => {
         return;
     }
     // Submit email to backend
-    const res = await fetch("https://hirvo-backend-production.up.railway.app/api/business-accounts/join-waitlist", {
+    const res = await fetch("https://dauntless-aron-unprobationary.ngrok-free.dev/api/business-accounts/join-waitlist", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -228,7 +228,7 @@ if (resetPasswordBtn) {
         newPasswordInput.value = '';
         confirmPasswordInput.value = '';
     try {
-      const res = await fetch("https://hirvo-backend-production.up.railway.app/api/api/auth/reset-password", {
+      const res = await fetch("https://dauntless-aron-unprobationary.ngrok-free.dev/api/auth/reset-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         try {
             // Simulate API call of 3 seconds
             // TODO: Replace with actual API call
-            const res = await fetch('https://hirvo-backend-production.up.railway.app/api//accounts/verify-account', {
+            const res = await fetch('https://dauntless-aron-unprobationary.ngrok-free.dev/api/accounts/verify-account', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
