@@ -133,14 +133,15 @@ businessForm.addEventListener('submit', async (event) => {
         showToast('Please add an email address.', 'error');
         return;
     }
-    // Submit email to backend
     const res = await fetch("https://dauntless-aron-unprobationary.ngrok-free.dev/api/business-accounts/join-waitlist", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            'ngrok-skip-browser-warning': 'true'
         },
         body: JSON.stringify({ email, company }),
     })
+    console.log(res)
     if (!res.ok) {
         showToast('Something went wrong. Please try again later.', 'error');
         return;
@@ -218,7 +219,7 @@ if (resetPasswordBtn) {
       return;
     }
 
-    let baseUrl = "backend-url/api/"
+    let baseUrl = "https://dauntless-aron-unprobationary.ngrok-free.dev/api/"
     if (userType === 'business') {
       baseUrl += "business-accounts/reset-password";
     } else {
@@ -228,8 +229,8 @@ if (resetPasswordBtn) {
         newPasswordInput.value = '';
         confirmPasswordInput.value = '';
     try {
-      const res = await fetch("https://dauntless-aron-unprobationary.ngrok-free.dev/api/auth/reset-password", {
-        method: "POST",
+      const res = await fetch(baseUrl, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -255,11 +256,10 @@ const email = urlParams.get('email');
 
 // When the document is fully loaded, make call to the API to verify account
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log("Calling")
     const loadingCard = document.querySelector('.verification-loading')
     const successCard = document.querySelector('.verified-card')
     const failureCard = document.querySelector('.verification-failed-card')
-    
+    if (loadingCard && successCard && failureCard) {
     if (!code || !email) {
         loadingCard.style.display = 'none';
         failureCard.style.display = 'flex';
@@ -268,8 +268,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (code && email) {
         loadingCard.style.display = 'flex';
         try {
-            // Simulate API call of 3 seconds
-            // TODO: Replace with actual API call
             const res = await fetch('https://dauntless-aron-unprobationary.ngrok-free.dev/api/accounts/verify-account', {
                 method: 'POST',
                 headers: {
@@ -285,11 +283,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 failureCard.style.display = 'flex';
             }
         } catch (error) {
-          console.log(error)
             loadingCard.style.display = 'none';
             failureCard.style.display = 'flex';
         } finally {
             loadingCard.style.display = 'none';
         }
+    }
     }
 })
