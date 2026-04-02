@@ -652,6 +652,41 @@ section {
 }
   
 }
+
+/* ================= SUPPORT================= */
+
+.support {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.support .section-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.support .section-title h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.support .section-title p {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.support a {
+  color: #10b091;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.support a:hover {
+  text-decoration: underline;
+}
 /* ================= FOOTER ================= */
 
 footer {
