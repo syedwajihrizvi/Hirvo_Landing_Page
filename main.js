@@ -289,3 +289,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     }
 })
+
+const params = new URLSearchParams(window.location.search);
+const section = params.get('section');
+
+if (section) {
+  const el = document.getElementById(section);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
