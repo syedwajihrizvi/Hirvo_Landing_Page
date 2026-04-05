@@ -1227,3 +1227,102 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+
+/* ================= Privacy Policy ================= */
+.privacy-policy-main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  background-color: #f9fafb;
+}
+
+.privacy-policy-main > div {
+  max-width: 800px;
+  width: 100%;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+}
+
+/* Headings */
+.privacy-policy-main h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.privacy-policy-main h2 {
+  font-size: 20px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.privacy-policy-main h3 {
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+/* Text */
+.privacy-policy-main p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+/* Lists */
+.privacy-policy-main ul {
+  margin: 8px 0 16px 20px;
+  padding: 0;
+}
+
+.privacy-policy-main li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* Links */
+.privacy-policy-main a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.privacy-policy-main a:hover {
+  text-decoration: underline;
+}
+
+/* Strong text */
+.privacy-policy-main strong {
+  color: #111827;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+  .privacy-policy-main > div {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .privacy-policy-main h1 {
+    font-size: 24px;
+  }
+
+  .privacy-policy-main h2 {
+    font-size: 18px;
+  }
+
+  .privacy-policy-main h3 {
+    font-size: 15px;
+  }
+
+  .privacy-policy-main p,
+  .privacy-policy-main li {
+    font-size: 14px;
+  }
+}
