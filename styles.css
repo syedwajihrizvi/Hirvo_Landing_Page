@@ -721,6 +721,22 @@ footer {
   color: var(--emerald-600);
 }
 
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: var(--slate-500);
+  font-size: 14px;
+  text-decoration: none;
+}
 /* ================= DESKTOP ================= */
 
 @media (min-width: 768px) {
