@@ -2,5 +2,6 @@
 /verify-account /verify-account.html 200
 /privacy-policy /privacy-policy.html 200
 /terms-of-service /terms-of-service.html 200
+/oauth-guide /oauth-guide.html 200
 /*              /index.html         200
 /support        /index.html?section=support

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hirvo — Hire Faster. Apply Smarter.</title>
+    <meta name="keywords" content="Hirvo, Hiring, Jobs, Talent, Recruitment"/>
+    <meta name="description" content="Hirvo is only about one thing: Hiring. No social feeds, no influencer posts, no community noise. Companies find talent. Talent finds jobs. If it doesn't help you hire or get hired, it doesn't belong here."/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/imgs/favicon/site.webmanifest">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <a href="/index.html">
+        <img src="/assets/imgs/minimal-logo.png" alt="Hirvo Logo" class="logo logo-mobile" />
+      </a>
+      <a href="/index.html"><h3 class="logo-desktop">Hirvo</h3></a>
+    </div>
+    <nav>
+      <a href="/index.html">Features</a>
+      <a href="/index.html#how">How It Works</a>
+      <a href="/index.html#cta">Get Started</a>
+    </nav>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#cta">Get Started</a>
+  </div>
+</header>
+
+<section class="privacy-policy-main">
+    <div>
+        <h1>OAuth Guide</h1>
+        <p><strong>Effective Date:</strong> April 4, 2026</p>
+        <p>
+            Hirvo uses OAuth 2.0 for secure authentication and authorization when integrating with third-party services. 
+            This guide provides an overview of how OAuth works within the Hirvo app and how to set it up for your account.
+            OAuth allows users to grant Hirvo access to their information on other services (like Google, Zoom, Microsoft, Dropbox, and Webex) without sharing their passwords.
+            It is a state-of-the-art protocol that ensures secure and efficient authorization, enabling users to seamlessly connect their accounts and enhance their experience on Hirvo.
+        </p>
+        <h2>OAuth Services Used</h2>
+        <p>We utilize the following OAuth services to enhance user experience. These services are optional and require user consent.</p>
+        <h3>a. Google</h3>
+        <ul>
+            <li>User logs into their google account via the app and gives us consent</li>
+            <li>For business users, they can directly create meetings and manage schedules</li>
+            <li>For non-business users, they can upload files directly from Google Drive such as resumes, cover letters, etc</li>
+            <li>We lose consent once the token expires or the user logs out</li>
+        </ul>
+
+        <h3>b. Zoom</h3>
+        <ul>
+            <li>User logs into their Zoom account via the app and gives us consent</li>
+            <li>For business users, they can directly create meetings and manage schedules</li>
+            <li>We lose consent once the token expires or the user logs out</li>
+        </ul>
+
+        <h3>c. Microsoft</h3>
+        <ul>
+            <li>User logs into their MS account via the app and gives us consent</li>
+            <li>For business users, they can directly create meetings and manage schedules</li>
+            <li>For non-business users, they can upload files directly from OneDrive such as resumes, cover letters, etc</li>
+            <li>We lose consent once the token expires or the user logs out</li>
+        </ul>
+
+        <h3>d. Dropbox</h3>
+        <ul>
+            <li>User logs into their Dropbox account via the app and gives us consent</li>
+            <li>For non-business users, they can upload files directly from Dropbox such as resumes, cover letters, etc</li>
+            <li>We lose consent once the token expires or the user logs out</li>
+        </ul>
+
+        <h4>d. Webex</h4>
+        <ul>
+            <li>User logs into their Webex account via the app and gives us consent</li>
+            <li>For business users, they can directly create meetings and manage schedules</li>
+            <li>We lose consent once the token expires or the user logs out</li>
+        </ul>
+
+        <h2>Contact Us</h2>
+        <p>
+            If you have any questions or concerns about our use of OAuth services, please contact us at:
+        </p>
+        <p>Email: <a href="mailto:support@hirvo.ca">support@hirvo.ca</a></p>
+    </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer__text">Hirvo</span></span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
