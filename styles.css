@@ -176,11 +176,11 @@ nav a:hover { color: var(--emerald-600); }
 }
 
 #phone-stack-user {
-  display: flex;
+  display: none;
 }
 
 #phone-stack-business {
-  display: none;
+  display: flex;
 }
 /* ================= PHONE BASE ================= */
 
