@@ -362,11 +362,11 @@ section {
 }
 
 .features-user {
-    display: flex;
+    display: none;
 }
 
 .features-business {
-    display: none;
+    display: flex;
 }
 
 .features::-webkit-scrollbar { display: none; }
