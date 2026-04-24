@@ -154,24 +154,28 @@ businessForm.addEventListener('submit', async (event) => {
 
 
 /* ================= FEATURE SCROLL ================= */
-const featureContainer = document.querySelector('.features');
+const featureContainer = document.querySelectorAll('.features.reveal-group');
 const leftBtn = document.querySelector('.feature-btns .bi-arrow-left');
 const rightBtn = document.querySelector('.feature-btns .bi-arrow-right');
 
 if (leftBtn && rightBtn && featureContainer) {
 leftBtn.addEventListener('click', () => {
-  featureContainer.scrollBy({
-    left: -300,
-    behavior: 'smooth'
-  });
+  for (let container of featureContainer) {
+    console.log('Left button clicked');
+     container.scrollBy({
+      left: -300,
+      behavior: 'smooth'
+    });
+  }
 });
 
 rightBtn.addEventListener('click', () => {
-  console.log('Right button clicked');
-  featureContainer.scrollBy({
-    left: 300,
-    behavior: 'smooth'
-  });
+  for (let container of featureContainer) {
+     container.scrollBy({
+      left: 300,
+      behavior: 'smooth'
+    });
+  }
 });
 }
 
