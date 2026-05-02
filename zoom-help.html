@@ -44,51 +44,27 @@
 
 <section class="privacy-policy-main">
     <div>
-        <h1>OAuth Guide</h1>
+        <h1>Zoom Help</h1>
         <p><strong>Effective Date:</strong> April 4, 2026</p>
         <p>
-            Hirvo uses OAuth 2.0 for secure authentication and authorization when integrating with third-party services. 
-            This guide provides an overview of how OAuth works within the Hirvo app and how to set it up for your account.
-            OAuth allows users to grant Hirvo access to their information on other services (like Google, Zoom, Microsoft, Dropbox, and Webex) without sharing their passwords.
-            It is a state-of-the-art protocol that ensures secure and efficient authorization, enabling users to seamlessly connect their accounts and enhance their experience on Hirvo.
+            Hirvo uses OAuth 2.0 to integrate with Zoom for secure authentication and authorization. 
+            This guide provides an overview of how to set up and use the Zoom integration within the Hirvo app.
+            By connecting your Zoom account, you can seamlessly create and manage meetings directly from Hirvo, enhancing your scheduling and communication experience.
+            The Zoom integration allows you to easily schedule interviews, team meetings, and other events without leaving the Hirvo platform, streamlining your workflow and improving efficiency.
         </p>
-        <h2>OAuth Services Used</h2>
-        <p>We utilize the following OAuth services to enhance user experience. These services are optional and require user consent.</p>
-        <h3>a. Google</h3>
+        <h3>a. How to Add Zoom Integration</h3>
         <ul>
-            <li>User logs into their google account via the app and gives us consent</li>
-            <li>For business users, they can directly create meetings and manage schedules</li>
-            <li>For non-business users, they can upload files directly from Google Drive such as resumes, cover letters, etc</li>
-            <li>We lose consent once the token expires or the user logs out</li>
+            <li>When scheduling an online interviw, choose your desire platform as Zoom</li>
+            <li>On the OAuth Consent screen, give Hirvo permission to create, update, and delete meetings on your behalf</li>
+            <li>Whenver you create an interview on Hirvo, if Hirvo has consent it will automatically create the corresponding Zoom meeting</li>
+            <li>Troubleshooting: If you encounter any issues with the Zoom integration, please contact our support team for assistance at <a href="mailto:support@hirvo.ca">support@hirvo.ca</a>.</li>
         </ul>
 
-        <h3>b. Zoom</h3>
+        <h3>b. How to Remove Zoom Integration</h3>
         <ul>
-            <li>User logs into their Zoom account</li>
-            <li>For business users, they can directly create meetings and manage schedules</li>
-            <li>We lose consent once the token expires or the user logs out</li>
-        </ul>
-
-        <h3>c. Microsoft</h3>
-        <ul>
-            <li>User logs into their MS account via the app and gives us consent</li>
-            <li>For business users, they can directly create meetings and manage schedules</li>
-            <li>For non-business users, they can upload files directly from OneDrive such as resumes, cover letters, etc</li>
-            <li>We lose consent once the token expires or the user logs out</li>
-        </ul>
-
-        <h3>d. Dropbox</h3>
-        <ul>
-            <li>User logs into their Dropbox account via the app and gives us consent</li>
-            <li>For non-business users, they can upload files directly from Dropbox such as resumes, cover letters, etc</li>
-            <li>We lose consent once the token expires or the user logs out</li>
-        </ul>
-
-        <h4>d. Webex</h4>
-        <ul>
-            <li>User logs into their Webex account via the app and gives us consent</li>
-            <li>For business users, they can directly create meetings and manage schedules</li>
-            <li>We lose consent once the token expires or the user logs out</li>
+            <li>There are 2 ways to remove the Zoom integration</li>
+            <li>On the Schedule Interview screen, you can Sign Out of Zoom. This will remove all tokens that grant Hirvo access to your Zoom account.</li>
+            <li>If you sign out of the app, it will also remove all tokens that grant Hirvo access to your Zoom account.</li>
         </ul>
 
         <h2>Contact Us</h2>
