@@ -880,7 +880,7 @@ footer ul li a {
 }
 
 .logo-desktop {
-    font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive;
   font-weight: 600;
   font-style: normal;
   font-size: 2.5rem;
@@ -1341,4 +1341,190 @@ footer ul li a {
   .privacy-policy-main li {
     font-size: 14px;
   }
+}
+
+.google-picker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  height: auto;
+  min-height: 400px;
+  margin: auto;
+  margin-top: 4rem;
+  width: 85%;
+  max-width: 400px;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.google-drive-logo {
+  width: 96px;
+  height: 96px;
+}
+
+.google-picker-container h2 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.picker-description {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+/* Make Google Picker responsive on mobile */
+@media (max-width: 768px) {
+  .picker-dialog {
+    width: 95% !important;
+    height: 100% !important;
+    left: 2.5% !important;
+    top: 5% !important;
+  }
+  .picker-dialog-content, 
+  .picker-dialog-bg {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.google-picker-container button {
+  padding: 14px 22px;
+  border-radius: 0.75rem;
+  font-weight: 300;
+  transition: all .2s ease;
+  background: #10b981;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  width: 100%; /* Make button full width of container padding */
+  justify-content: center;
+}
+
+.google-picker-container button:active {
+  transform: scale(0.98);
+  background: #059669;
+}
+
+.security-footer {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  letter-spacing: 0.025em;
+}
+
+.security-footer i {
+  font-size: large;
+  color: gold; /* Matches your theme green */
+}
+
+.picker-dialog-bg {
+    z-index: 20000 !important;
+}
+
+.picker-dialog {
+    z-index: 20001 !important;
+}
+
+.google-picker-file-container {
+  display: block;
+}
+
+.google-picker-file-success {
+  max-width: 420px;
+  margin: 1rem auto;
+  padding: 1.5rem 1.25rem;
+  background: #ffffff;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: none;
+}
+
+/* Icons */
+.google-picker-file-success i {
+  font-size: 2rem;
+  margin: 0 0.25rem;
+  color: #10b981;
+  display: none;
+}
+
+/* Title */
+.google-picker-file-success h3 {
+  margin: 0.75rem 0 1rem;
+  font-weight: 600;
+  color: #047857;
+  font-size: 1.25rem;
+}
+
+/* Subtitle */
+.google-picker-file-success h4 {
+  margin-top: 1.25rem;
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* File info */
+.google-picker-file-success .file-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.google-picker-file-success .file-info-grid div {
+  background: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* Labels */
+.google-picker-file-success .label {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Values */
+.google-picker-file-success .value {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+  word-break: break-word;
+}
+
+/* Button */
+.google-picker-file-success .pick-new-file-button {
+  margin-top: 1.25rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  background: #10b981;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.google-picker-file-success .pick-new-file-button:hover {
+  background: #059669;
+}
+
+.google-picker-file-success .pick-new-file-button:active {
+  transform: scale(0.98);
 }
