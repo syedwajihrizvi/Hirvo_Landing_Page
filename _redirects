@@ -4,5 +4,6 @@
 /terms-of-service /terms-of-service.html 200
 /oauth-guide /oauth-guide.html 200
 /*              /index.html         200
-/support        /index.html?section=support
-/zoom-help      /zoom-help.html
+/support        /index.html?section=support 200
+/zoom-help      /zoom-help.html     200
+/google-picker  /google-picker-.html 200

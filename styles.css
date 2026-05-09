@@ -1526,3 +1526,15 @@ footer ul li a {
 .google-picker-file-success .pick-new-file-button:active {
   transform: scale(0.98);
 }
+
+.google-picker-file-success .pick-new-file-button p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.google-picker-file-success .pick-new-file-button h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
